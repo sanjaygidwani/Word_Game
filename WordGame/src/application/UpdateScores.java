@@ -14,8 +14,8 @@ public class UpdateScores {
 		else if(SceneController.level == 2) { totalScore = 60; }
 		else if(SceneController.level == 3) { totalScore = 130; }
 		
-        totalScore = totalScore + countAns;
-        totalTime = totalTime + (300-timeShow);
+                totalScore = totalScore + countAns;
+                totalTime = totalTime + (300-timeShow);
 		LBhandler updateUser = new LBhandler();
 		SceneController ob = new SceneController();
 		totalScore = totalScore>SceneController.userScore?totalScore:SceneController.userScore;
@@ -46,6 +46,5 @@ public class UpdateScores {
 		
 		String qu = "UPDATE Leader SET points ="+ totalScore + ",time ="+totalTime + " WHERE user ='"+ SceneController.user +"' ";
 		updateUser.execAction(qu);
-		updateUser.execAction("DELETE from Leader WHERE points = 0");
 	}
 }
