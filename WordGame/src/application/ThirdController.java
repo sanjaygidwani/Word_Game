@@ -59,17 +59,17 @@ public class ThirdController implements Initializable {
 	// Sets objects
 	String [] setQue = {"SODA","THIRSTY","DRINK","SPRITE","COLD","TEA","POP","COKE","DEW","FLAVOR"};
 	String [] setHint = {"Any of various forms of sodium carbonate.", 
-			             "Desiring to drink.",
-			             "To take into the mouth and swallow (a liquid).", 
-			             "A small or elusive supernatural being; an elf or pixie.", 
-			             "Having a low temperature.",
-			             "An eastern Asian evergreen shrub having fragrant, nodding and cup shaped white flowers.",
-			             "To make a short, sharp, explosive sound.",
-			             "It is used as a fuel and in making steel.",
-			             "Illegally distilled corn liquor.",
-			             "Distinctive taste."};
+			     "Desiring to drink.",
+			     "To take into the mouth and swallow (a liquid).", 
+			     "A small or elusive supernatural being; an elf or pixie.", 
+			     "Having a low temperature.",
+			     "An eastern Asian evergreen shrub having fragrant, nodding and cup shaped white flowers.",
+			     "To make a short, sharp, explosive sound.",
+			     "It is used as a fuel and in making steel.",
+			     "Illegally distilled corn liquor.",
+			     "Distinctive taste."};
 	
-    // Timer (Count down)
+        // Timer (Count down)
 	@FXML
 	private Label timer;
 	private Integer seconds = 300;
@@ -111,19 +111,19 @@ public class ThirdController implements Initializable {
 	public void submit(ActionEvent sevent) {
 		
 		String w1, w2, w3, w4, w5, w6, w7, w8, w9, w10;
-        byte userscore[] = new byte[10];
+                byte userscore[] = new byte[10];
         
 		// Combining meaningful letters
 		w1 = (tf01.getText() + tf02.getText() + tf03.getText() + tf04.getText()).toUpperCase();
 		w2 = (tf10.getText() + tf11.getText() + tf12.getText() + tf13.getText() + tf14.getText() + tf15.getText() + tf16.getText()).toUpperCase();
 		w3 = (tf03.getText() + tf13.getText() + tf23.getText() + tf33.getText() + tf43.getText()).toUpperCase();
 		w4 = (tf20.getText() + tf21.getText() + tf22.getText() + tf23.getText() + tf24.getText() + tf25.getText()).toUpperCase();
-        w5 = (tf26.getText() + tf36.getText() + tf46.getText() + tf56.getText()).toUpperCase();
-        w6 = (tf15.getText() + tf25.getText() + tf35.getText()).toUpperCase();
-        w7 = (tf32.getText() + tf42.getText() + tf52.getText()).toUpperCase();
-        w8 = (tf41.getText() + tf42.getText() + tf43.getText() + tf44.getText()).toUpperCase();
-        w9 = (tf40.getText() + tf50.getText() + tf60.getText()).toUpperCase();
-        w10 = (tf61.getText() + tf62.getText() + tf63.getText() + tf64.getText() + tf65.getText() + tf66.getText()).toUpperCase();
+                w5 = (tf26.getText() + tf36.getText() + tf46.getText() + tf56.getText()).toUpperCase();
+                w6 = (tf15.getText() + tf25.getText() + tf35.getText()).toUpperCase();
+                w7 = (tf32.getText() + tf42.getText() + tf52.getText()).toUpperCase();
+                w8 = (tf41.getText() + tf42.getText() + tf43.getText() + tf44.getText()).toUpperCase();
+                w9 = (tf40.getText() + tf50.getText() + tf60.getText()).toUpperCase();
+                w10 = (tf61.getText() + tf62.getText() + tf63.getText() + tf64.getText() + tf65.getText() + tf66.getText()).toUpperCase();
         
 		// Compare words with users input
 		if(w1.equals(setQue[0]))
@@ -161,13 +161,13 @@ public class ThirdController implements Initializable {
 		UpdateScores.update(countAns, timeShow);
 		
 		Stage stage = (Stage) thirdLevelExit.getScene().getWindow();
-	    stage.close();
+	        stage.close();
 	}
 	
 	// Function for entry
 	public void keyText(KeyEvent event) {
 
-	 sample = ((TextField)event.getSource()).getText();
+	        sample = ((TextField)event.getSource()).getText();
 		if(sample!=null && sample.length()!=0)
 			((TextField)event.getSource()).setEditable(false);
 	}
