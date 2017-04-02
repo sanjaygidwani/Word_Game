@@ -57,7 +57,7 @@ public class SceneController { // Validate input fields and opens new stage
 					startGame();
 				}
 			}
-		    else { 
+		        else { 
 			    addUser.closeDatabase();
 			    //Inserting new user
 			    user = username.getText();
@@ -66,9 +66,9 @@ public class SceneController { // Validate input fields and opens new stage
 			    if(addNewUser .isInserted(user, name.getText())){
 				    addNewUser.closeDatabase();
 				    startGame(); }
-		    }
-	    }
-    }
+		        }
+	        }
+        }
 	
 	public void startGame() throws IOException {
 		
@@ -103,7 +103,7 @@ public class SceneController { // Validate input fields and opens new stage
 	@FXML // Exit the window when pressed exit button
 	public void endGame(ActionEvent end_event) throws Exception {
 		Stage stage = (Stage) exit.getScene().getWindow();
-	    stage.close();
+	        stage.close();
 	}
 	
 	@FXML // Showing leader-board
