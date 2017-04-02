@@ -57,14 +57,14 @@ public class SecondController implements Initializable {
 	// Sets objects
 	String [] setQue = {"LIGHTS","ELF","GIFTS","TREE","SANTA","JESUS","FAMILY"};
 	String [] setHint = {"The lungs, especially the lungs of an animal slaughtered for food.", 
-			             "A small, often mischievous creature considered to have magic powers.",
-			             "Something that is bestowed voluntarily and without compensation.", 
-			             "A perennial woody plant having a main trunk and usually a distinct crown.", 
-			             "Santa Claus.",
-			             "A teacher and prosphet whose life and teachings form the basis of christian.",
-			             "Typically consisting parents and their children."};
+			     "A small, often mischievous creature considered to have magic powers.",
+			     "Something that is bestowed voluntarily and without compensation.", 
+			     "A perennial woody plant having a main trunk and usually a distinct crown.", 
+			     "Santa Claus.",
+			     "A teacher and prosphet whose life and teachings form the basis of christian.",
+			     "Typically consisting parents and their children."};
 	
-    // Timer (Count down)
+        // Timer (Count down)
 	@FXML
 	private Label timer;
 	private Integer seconds = 300;
@@ -106,16 +106,16 @@ public class SecondController implements Initializable {
 	public void submit(ActionEvent sevent) {
 		
 		String w1, w2, w3, w4, w5, w6, w7;
-        byte userscore[] = new byte[7];
+                byte userscore[] = new byte[7];
         
 		// Combining meaningful letters
 		w1 = (tf00.getText() + tf01.getText() + tf02.getText() + tf03.getText() + tf04.getText() + tf05.getText()).toUpperCase();
 		w2 = (tf20.getText() + tf21.getText() + tf22.getText()).toUpperCase();
 		w3 = (tf02.getText() + tf12.getText() + tf22.getText() + tf32.getText() + tf42.getText()).toUpperCase();
 		w4 = (tf04.getText() + tf14.getText() + tf24.getText() + tf34.getText()).toUpperCase();
-        w5 = (tf05.getText() + tf15.getText() + tf25.getText() + tf35.getText() + tf45.getText()).toUpperCase();
-        w6 = (tf40.getText() + tf41.getText() + tf42.getText() + tf43.getText() + tf44.getText()).toUpperCase();
-        w7 = (tf50.getText() + tf51.getText() + tf52.getText() + tf53.getText() + tf54.getText() + tf55.getText()).toUpperCase();
+                w5 = (tf05.getText() + tf15.getText() + tf25.getText() + tf35.getText() + tf45.getText()).toUpperCase();
+                w6 = (tf40.getText() + tf41.getText() + tf42.getText() + tf43.getText() + tf44.getText()).toUpperCase();
+                w7 = (tf50.getText() + tf51.getText() + tf52.getText() + tf53.getText() + tf54.getText() + tf55.getText()).toUpperCase();
         
 		// Compare words with users input
 		if(w1.equals(setQue[0]))
@@ -147,13 +147,13 @@ public class SecondController implements Initializable {
 		UpdateScores.update(countAns, timeShow);
 		
 		Stage stage = (Stage) secondLevelExit.getScene().getWindow();
-	    stage.close();
+	        stage.close();
 	}
 	
 	// Function for entry
 	public void keyText(KeyEvent event) {
 
-	 sample = ((TextField)event.getSource()).getText();
+	        sample = ((TextField)event.getSource()).getText();
 		if(sample!=null && sample.length()!=0)
 			((TextField)event.getSource()).setEditable(false);
 	}
