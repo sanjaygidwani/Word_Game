@@ -55,13 +55,13 @@ public class FirstController implements Initializable {
 	// Sets objects
 	String [] setQue = {"FREE","SLEEP","RELAX","PEN","GOAL","EXAM"};
 	String [] setHint = {"You might get a ____ toy with purchase.", 
-			             "You should get about 8 hrs of this a night.", 
-			             "If you get everything done with time to spare, you can kick back and ____ .", 
-			             "Hint not written.", 
-			             "We set these for ourselves.", 
-			             "How was it?"};
+			     "You should get about 8 hrs of this a night.", 
+			     "If you get everything done with time to spare, you can kick back and ____ .", 
+			     "Hint not written.", 
+			     "We set these for ourselves.", 
+			     "How was it?"};
 	
-    // Timer (Count down)
+        // Timer (Count down)
 	@FXML
 	private Label timer;
 	private Integer seconds = 300;
@@ -103,15 +103,15 @@ public class FirstController implements Initializable {
 	public void submit(ActionEvent sevent) {
 		
 		String w1, w2, w3, w4, w5, w6;
-        byte userscore[] = new byte[6];
+                byte userscore[] = new byte[6];
         
 		// Combining meaningful letters
 		w1 = (tf10.getText() + tf20.getText() + tf30.getText() + tf30.getText()).toUpperCase();
 		w2 = (tf01.getText() + tf11.getText() + tf21.getText() + tf31.getText() + tf41.getText()).toUpperCase();
 		w3 = (tf20.getText() + tf21.getText() + tf22.getText() + tf23.getText() + tf24.getText()).toUpperCase();
 		w4 = (tf41.getText() + tf42.getText() + tf43.getText()).toUpperCase();
-        w5 = (tf03.getText() + tf13.getText() + tf23.getText() + tf33.getText()).toUpperCase();
-        w6 = (tf14.getText() + tf24.getText() + tf34.getText() + tf44.getText()).toUpperCase();
+                w5 = (tf03.getText() + tf13.getText() + tf23.getText() + tf33.getText()).toUpperCase();
+                w6 = (tf14.getText() + tf24.getText() + tf34.getText() + tf44.getText()).toUpperCase();
         
 		// Compare words with users input
 		if(w1.equals(setQue[0]))
@@ -141,13 +141,13 @@ public class FirstController implements Initializable {
 		UpdateScores.update(countAns, timeShow);
 		
 		Stage stage = (Stage) firstLevelExit.getScene().getWindow();
-	    stage.close();
+	        stage.close();
 	}
 	
 	// Function for entry
 	public void keyText(KeyEvent event) {
 
-	 sample = ((TextField)event.getSource()).getText();
+	        sample = ((TextField)event.getSource()).getText();
 		if(sample!=null && sample.length()!=0)
 			((TextField)event.getSource()).setEditable(false);
 	}
