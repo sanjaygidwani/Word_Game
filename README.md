@@ -6,4 +6,4 @@
 
 • Requirements: Eclipse IDE for Java Developers [ http://www.eclipse.org/downloads/packages/eclipse-ide-java-developers/neon3 ], Configuration for JavaFX and SQLite support.
 
-``Copyright © 2017 sgidwani96(Sanjay Gidwani). All rights reserved.``
+``Copyright © 2017 Sanjay Gidwani``
